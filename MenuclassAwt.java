@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class MenuclassAwt implements ActionListener {
 	
-	Frame f;
+	Frame p;
 	String s="";
 	TextArea ta;
 	MenuBar mbar;
@@ -16,10 +16,10 @@ public class MenuclassAwt implements ActionListener {
 	
 	MenuclassAwt()
 	{
-		f =new Frame();
-		f.setVisible(true);
-        f.setSize(500,500);	
-        f.setTitle("Note Pad");
+		p =new Frame();
+		p.setVisible(true);
+        p.setSize(500,500);	
+        p.setTitle("Note Pad");
         
         ta= new TextArea(40,60);
         l = new Label("");
@@ -44,7 +44,7 @@ public class MenuclassAwt implements ActionListener {
         mu = new MenuItem("mu");
         font = new MenuItem("font");
         exit = new MenuItem("exit");
-        f.setMenuBar(mbar);
+        p.setMenuBar(mbar);
         
         mbar.add(file);
         mbar.add(edit);
@@ -67,7 +67,7 @@ public class MenuclassAwt implements ActionListener {
         view.add(mu);
         format.add(font);
         
-        f.add(ta);
+        p.add(ta);
         
        New.addActionListener(this);
        cut.addActionListener(this);
@@ -115,7 +115,7 @@ public class MenuclassAwt implements ActionListener {
 	     	
 	     	if(e.getSource()==exit)
 	     	{
-	     		f.dispose();
+	     		p.dispose();
 	     	}
 		
 	}
